@@ -1,6 +1,7 @@
 // frontend/src/components/AIHealthPredictor.jsx
 import React, { useState, useEffect } from "react";
 import { getUserData } from "../hooks/useLocalStorage";
+import { API_URL } from "../config/api";
 
 const AIHealthPredictor = () => {
   const [predictions, setPredictions] = useState([]);

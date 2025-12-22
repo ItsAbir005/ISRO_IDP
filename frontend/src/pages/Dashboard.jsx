@@ -7,6 +7,7 @@ import { checkAbnormalVitals } from "../utils/vitalRules";
 import { showMotivationalToast } from "../utils/motivationUtils";
 import toast, { Toaster } from "react-hot-toast";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
+import { API_URL } from "../config/api";
 
 const Dashboard = () => {
   const [vitals] = useLocalStorage("vitals", []);

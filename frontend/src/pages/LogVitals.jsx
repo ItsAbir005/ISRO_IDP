@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocalStorage, setUserData } from "../hooks/useLocalStorage";
+import { API_URL } from "../config/api";
 
 const LogVitals = () => {
   const [form, setForm] = useState({
@@ -29,7 +30,7 @@ const LogVitals = () => {
         return;
       }
 
-      const res = await fetch("http://localhost:5000/api/vitals/log-vitals", {
+      const res = await fetch(`${API_URL}/api/vitals/log-vitals`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

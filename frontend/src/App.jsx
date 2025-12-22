@@ -8,7 +8,7 @@ import GamifiedRewards from "./pages/Rewards";
 import FamilyHealthHub from "./pages/FamilyHealthHub";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-
+import { API_URL } from "./config/api";
 export const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
 

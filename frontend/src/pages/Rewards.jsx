@@ -1,6 +1,7 @@
 // frontend/src/pages/Rewards.jsx
 import React, { useEffect, useState } from "react";
 import { getUserData, setUserData } from "../hooks/useLocalStorage";
+import { API_URL } from "../config/api";
 
 const GamifiedRewards = () => {
   const [streak, setStreak] = useState(0);
@@ -18,7 +19,7 @@ const GamifiedRewards = () => {
         }
 
         // ✅ Try to fetch from backend first
-        const res = await fetch("http://localhost:5000/api/user/progress", {
+        const res = await fetch(`${API_URL}/api/user/progress`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 

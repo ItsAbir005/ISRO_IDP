@@ -1,5 +1,6 @@
 // frontend/src/components/EmergencyAlert.jsx
 import React, { useState } from "react";
+import { API_URL } from "../config/api";
 
 const EmergencyAlert = ({ vitals, onClose }) => {
   const [calling, setCalling] = useState(false);

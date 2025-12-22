@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { getUserData } from "../hooks/useLocalStorage";
+import { API_URL } from "../config/api";
 
 function ChatBot() {
   const [messages, setMessages] = useState([]);
@@ -58,7 +59,7 @@ function ChatBot() {
     setIsTyping(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/chat", {
+      const res = await fetch(`${API_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
